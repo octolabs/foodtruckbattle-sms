@@ -1,0 +1,17 @@
+application: foodtruckbattle-sms
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  script: main.py
+
+- url: /sms
+  script: main.py
+
+
+- url: /admin/.*
+  script: admin.py
+  login: required
+
