@@ -3,6 +3,6 @@
 
 settings = {
     # put your Twilio account sid and auth token here
-    "twilio_account_sid": "xxxx",
+	"twilio_account_sid": "xxxx",
 	"twilio_auth_token": "xxxx",
 }
