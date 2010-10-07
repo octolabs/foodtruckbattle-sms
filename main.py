@@ -28,9 +28,9 @@ class MainPage(webapp.RequestHandler):
 		<center>
 		<img src="/static/logo.jpg"/>
 		<br/>
-		Welcome to DC Food Truck Battle site
 		<br/>
-		<br/>
+		<b>Curbside Cookoff Real-Time Vote Totals</b>
+		<h1>"Who's Going to Get the Curby?"</h1>
 		<b>LEADERBOARD</b>
 		<br/>
 		<br/>
@@ -47,7 +47,7 @@ class MainPage(webapp.RequestHandler):
 class Sms(webapp.RequestHandler):
     def get(self):
 		phone=cgi.escape(self.request.get('From'))
-		msg=cgi.escape(self.request.get('Body'))
+		msg=cgi.escape(self.request.get('Body')).upper()
 
 		if msg in settings.foodtrucks:
 			utils.incrementCounter(msg)		
